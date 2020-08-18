@@ -18,7 +18,7 @@ public class MyWebApplicationInitializer implements WebApplicationInitializer {
         // Load Spring web application configuration
         AnnotationConfigWebApplicationContext ac = new AnnotationConfigWebApplicationContext();
         ac.register(AppConfig.class);
-        ac.refresh();
+//        ac.refresh();
 
         // Create and register the DispatcherServlet
         DispatcherServlet servlet = new DispatcherServlet(ac);
