@@ -11,8 +11,8 @@ public class App {
         Tomcat tomcat = new Tomcat();
         tomcat.setPort(8006);
 
-//        tomcat.addWebapp("/", "C:\\Users\\duoyi\\Desktop\\ipa");
-        tomcat.addWebapp("/", "C:\\Users\\11329\\Desktop\\aa");
+        tomcat.addWebapp("/", "C:\\Users\\duoyi\\Desktop\\aa");
+//        tomcat.addWebapp("/", "C:\\Users\\11329\\Desktop\\aa");
         tomcat.start();
         tomcat.getServer().await();
     }

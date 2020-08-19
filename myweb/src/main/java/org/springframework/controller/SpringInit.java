@@ -5,7 +5,7 @@ import org.springframework.controller.service.UserService;
 
 public class SpringInit {
 	public static void main(String[] args) {
-		AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
+		AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(WebConfig.class);
 
 		UserService userService = ac.getBean(UserService.class);
 

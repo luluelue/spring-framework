@@ -7,9 +7,9 @@ dependencies {
     compile(project(":spring-context"))
     compile(project(":spring-web"))
     compile(project(":spring-webmvc"))
-    compile("org.apache.tomcat:tomcat-catalina:9.0.37")
-    compile("org.apache.tomcat:tomcat-jasper:9.0.37")
-    compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-core', version: '9.0.37'
+    compile("org.apache.tomcat:tomcat-catalina:8.5.37")
+    compile("org.apache.tomcat:tomcat-jasper:8.5.37")
+    compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-core', version: '8.5.37'
 
 }
 

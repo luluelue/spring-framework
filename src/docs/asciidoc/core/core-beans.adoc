@@ -7667,7 +7667,7 @@ The simplest possible `@Configuration` class reads as follows:
 	}
 ----
 
-The preceding `AppConfig` class is equivalent to the following Spring `<beans/>` XML:
+The preceding `WebConfig` class is equivalent to the following Spring `<beans/>` XML:
 
 [source,xml,indent=0,subs="verbatim,quotes"]
 ----
@@ -7889,7 +7889,7 @@ following example shows:
 
 NOTE: Remember that `@Configuration` classes are <<beans-meta-annotations, meta-annotated>>
 with `@Component`, so they are candidates for component-scanning. In the preceding example,
-assuming that `AppConfig` is declared within the `com.acme` package (or any package
+assuming that `WebConfig` is declared within the `com.acme` package (or any package
 underneath), it is picked up during the call to `scan()`. Upon `refresh()`, all its `@Bean`
 methods are processed and registered as bean definitions within the container.
 
@@ -9244,10 +9244,10 @@ options for using `@Configuration` classes in this kind of "`XML-centric`" situa
 .[[beans-java-combining-xml-centric-declare-as-bean]]Declaring `@Configuration` classes as plain Spring `<bean/>` elements
 --
 Remember that `@Configuration` classes are ultimately bean definitions in the
-container. In this series examples, we create a `@Configuration` class named `AppConfig` and
+container. In this series examples, we create a `@Configuration` class named `WebConfig` and
 include it within `system-test-config.xml` as a `<bean/>` definition. Because
 `<context:annotation-config/>` is switched on, the container recognizes the
-`@Configuration` annotation and processes the `@Bean` methods declared in `AppConfig`
+`@Configuration` annotation and processes the `@Bean` methods declared in `WebConfig`
 properly.
 
 The following example shows an ordinary configuration class in Java:
@@ -9339,7 +9339,7 @@ jdbc.password=
 ----
 
 
-NOTE: In `system-test-config.xml` file, the `AppConfig` `<bean/>` does not declare an `id`
+NOTE: In `system-test-config.xml` file, the `WebConfig` `<bean/>` does not declare an `id`
 element. While it would be acceptable to do so, it is unnecessary, given that no other bean
 ever refers to it, and it is unlikely to be explicitly fetched from the container by name.
 Similarly, the `DataSource` bean is only ever autowired by type, so an explicit bean `id`
